@@ -282,9 +282,9 @@ SDKの実行に必要な情報を<application>タグ内に追加します。
 
 [広告IDを利用するためのGoogle Play Services SDKの導入](./doc/google_play_services/ja/)
 
-[（オプション）外部ストレージを利用した重複排除設定](./doc/external_storage/ja/)
+[（オプション）外部ストレージを利用した重複排除設定](https://github.com/cyber-z/public_fox_android_sdk/tree/master/doc/external_storage/ja)
 
-[AndroidManifest.xmlサンプル](./doc/config_android_manifest/AndroidManifest.xml)
+[AndroidManifest.xmlサンプル](https://github.com/cyber-z/public_fox_android_sdk/blob/master/doc/config_android_manifest/AndroidManifest.xml)
 
 
 ## 6. ProGuardを利用する場合
@@ -309,7 +309,7 @@ ProGuard を利用してアプリケーションの難読化を行う際は F
 -dontwarn com.naef.jnlua.**
 ```
 
-また、Google Play Service SDK を導入されている場合は、以下のページで記載されている keep 指定が記述されているかご確認ください。
+また、Google Play Service SDK を導入されている場合は、以下のぺージに記載されている keep 指定が記述されているかご確認ください。
 
 [Google Play Services導入時のProguard対応](https://developer.android.com/google/play-services/setup.html#Proguard)
 
@@ -352,17 +352,17 @@ ProGuard を利用してアプリケーションの難読化を行う際は F
 
 ## 最後に必ずご確認ください（これまで発生したトラブル集）
 
-### URLスキームの設定がされずリリースされたためブラウザからアプリに遷移ができない
+### URLスキームの設定がされずリリースされたためブラウザからアプリに遷移ができない
 
-Cookie 計測を行いブラウザを起動した場合には、URL スキームを利用してアプリケーションに遷移します。 この際、独自の URL スキームが設定されている必要があります。
-
-
-### URLスキームに大文字が含まれ、正常にアプリに遷移されない
-
-環境によって、URLスキームの大文字小文字が判別されないことにより正常に URLスキームの遷移が行えない場合があります。URLスキームは全て小文字で設定を行ってください。
+Cookie 計測を行いブラウザを起動した場合には、URL スキームを利用してアプリケーションに遷移します。 この際、独自の URL スキームが設定されている必要があります。
 
 
-### F.O.Xで確認できるインストール数の値がGoogle Play Developer Consoleの数字より大きい
+### URLスキームに大文字が含まれ、正常にアプリに遷移されない
+
+環境によって、URLスキームの大文字小文字が判別されないことにより正常に URLスキームの遷移が行えない場合があります。URLスキームは全て小文字で設定を行ってください。
+
+
+### F.O.Xで確認できるインストール数の値がGoogle Play Developer Consoleの数字より大きい
 
 F.O.Xではいくつかの方式を組み合わせて端末の重複インストール検知を行っています。
 重複検知が行えない設定では、同一端末でも再インストールされる度にF.O.Xは新規のインストールと判定してしまいます。
