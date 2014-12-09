@@ -123,9 +123,10 @@ FoxPlugin.sendStartSession();
 
 
 
+* **アクセス解析による課金計測**
 アクセス解析による課金計測を実施したい場合は下記のリンクを参照してください。
 
-[アクセス解析による課金計測](https://github.com/cyber-z/public_fox_ios_sdk/blob/master/doc/analytics_purchase/ja/README.md)
+[アクセス解析による課金計測](./doc/analytics_purchase/ja)
 
 
 ## 5. 各OS毎の設定
@@ -261,7 +262,7 @@ SDKの実行に必要な情報を<application>タグ内に追加します。
 </receiver>
 ```
 
-既に"com.android.vending.INSTALL_REFERRER"に対するレシーバークラスが定義されている場合には、[二つのINSTALL_REFERRERレシーバーを共存させる場合の設定](./doc/install_referrer/ja/)をご参照ください。
+既に"com.android.vending.INSTALL_REFERRER"に対するレシーバークラスが定義されている場合には、[二つのINSTALL_REFERRERレシーバーを共存させる場合の設定](https://github.com/cyber-z/public_fox_android_sdk/blob/master/doc/install_referrer/ja/README.md)をご参照ください。
 
 
 ### リエンゲージメント計測の実装
@@ -284,7 +285,7 @@ SDKの実行に必要な情報を<application>タグ内に追加します。
 
 [（オプション）外部ストレージを利用した重複排除設定](https://github.com/cyber-z/public_fox_android_sdk/tree/master/doc/external_storage/ja)
 
-[AndroidManifest.xmlサンプル](https://github.com/cyber-z/public_fox_android_sdk/blob/master/doc/config_android_manifest/AndroidManifest.xml)
+[AndroidManifest.xmlサンプル](./doc/config_android_manifest/AndroidManifest.xml)
 
 
 ## 6. ProGuardを利用する場合
@@ -371,4 +372,4 @@ F.O.Xではいくつかの方式を組み合わせて端末の重複インスト
 
 [広告IDを利用するためのGoogle Play Services SDKの導入](./doc/google_play_services/ja/)
 
-[（オプション）外部ストレージを利用した重複排除設定](./doc/external_storage/ja/)
+[（オプション）外部ストレージを利用した重複排除設定](https://github.com/cyber-z/public_fox_android_sdk/tree/master/doc/external_storage/ja)
