@@ -75,7 +75,8 @@ FoxPlugin.sendConversion("http://yourhost.com/yourpage.html");
 
 会員登録、チュートリアル突破、課金など任意の成果地点にLTV計測を実装することで、流入元広告のLTVを測定することができます。LTV計測が不要の場合には、本項目の実装を省略できます。
 
-ソースの編集は、成果が上がった後に実行されるスクリプトに処理を記述します。例えば、会員登録やアプリ内課金後の課金計測では、登録・課金処理実行後のコールバック内に LTV 計測処理を記述します。 対象のスクリプト(C#、または JavaScript)によって編集内容が異なりますのでご注意ください。
+ソースの編集は、成果が上がった後に実行されるスクリプトに処理を記述します。例えば、会員登録やアプリ内課金後の
+課金計測では、登録・課金処理実行後のコールバック内に LTV 計測処理を記述します。 対象のスクリプト(C#、または JavaScript)によって編集内容が異なりますのてこ注意ください。
 
 
 ```C#
@@ -84,13 +85,16 @@ FoxPlugin.sendLtv(成果地点 ID);
 
 LTV計測を行うためには、各成果地点を識別する成果地点IDを指定する必要があります。sendLtvの引数に発行されたIDを指定してください。
 
-課金計測を行う場合には、課金が完了した箇所で以下のように課金額と通貨コードを指定してください。
+課金計測を行う場合には、課金が完了した箇所で以下のように課金額を指定してください。
 
 ```C#
 // ...
 FoxPlugin.addParameter(FoxPlugin.PARAM_PRICE, "2000");
 FoxPlugin.sendLtv(成果地点 ID);
-```> Javascriptで編集する場合は、文中の「FoxPlugin」を「FoxPluginJS」に読み替えてください。
+```
+
+> Javascriptで編集する場合は、文中の「FoxPlugin」を「FoxPluginJS」に読み替えてください。
+
 
 ## 4. アクセス解析の実装
 
@@ -103,7 +107,8 @@ FoxPlugin.sendLtv(成果地点 ID);
 
 ### スクリプトを利用する場合
 
-「Plugins/FoxAnalyticsSession」を Main Camera にドラッグ&ドロップします。アプリの起動時やバックグラウンドからの復帰時にセッション開始計測を行います。
+「Plugins/FoxAnalyticsSession」を Main Camera にドラッグ&ドロップします。
+アプリの起動時やバックグラウンドからの復帰時にセッション開始計測を行います。
 
 > プロジェクト内に複数のSceneが存在する場合は、計測地点は全てのMain Cameraに設定してください。設定されていないSceneが表示されている状態でバックグラウンドか復帰した場合には、正確な計測が行えなくなります。
 
@@ -265,7 +270,14 @@ SDKの実行に必要な情報を<application>タグ内に追加します。
 カスタムURLスキームは他のActivityで設定しているものと異なる値を設定してください。
 
 ```xml
-<activity android:name="jp.appAdForce.android.IntentReceiverActivity" android:launchMode="singleTask">	<intent-filter>		<action android:name="android.intent.action.VIEW" />		<category android:name="android.intent.category.DEFAULT" />		<category android:name="android.intent.category.BROWSABLE" />		<data android:scheme="カスタム URL スキーム" />	</intent-filter></activity>
+<activity android:name="jp.appAdForce.android.IntentReceiverActivity" android:launchMode="singleTask">
+	<intent-filter>
+		<action android:name="android.intent.action.VIEW" />
+		<category android:name="android.intent.category.DEFAULT" />
+		<category android:name="android.intent.category.BROWSABLE" />
+		<data android:scheme="カスタム URL スキーム" />
+	</intent-filter>
+</activity>
 ```
 
 [広告IDを利用するためのGoogle Play Services SDKの導入](./doc/google_play_services/ja/)
