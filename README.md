@@ -49,7 +49,7 @@ F.O.Xで計測された情報を使い、ユーザーに対してプッシュ通
 
 アプリ起動時に一度だけ読み込まれるオブジェクトがある場合は、GUI(Inspector)での編集が可能です。
 
-例)Main CameraのInspectorを利用し、インストール計測を行う
+例）Main CameraのInspectorを利用し、インストール計測を行う
 
 1. プロジェクトの「Plugins/FoxPlugin.cs」をMain Cameraにドラッグ＆ドロップする
 2. Main CameraのInspector上で、Fox PluginスクリプトのUrl変数に対してdefaultという文字列を指定する
