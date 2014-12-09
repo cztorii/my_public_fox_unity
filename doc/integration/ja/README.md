@@ -11,9 +11,7 @@
 7. 「Import」ボタンを押下する
 
 
-> iOSでF.O.Xのプッシュ通知を利用しない場合は、FoxNotifyPlugin.h, FoxNotifyPlugin.mをインポートしないでください。
-
-> iOSでリエンゲージメント計測を実施しない場合は、FoxReengagePlugin.h, FoxReengagePlugin.mをインポートしないでください。
+> iOSでF.O.Xのプッシュ通知を利用しない場合は、FoxNotifyPlugin.h, FoxNotifyPlugin.mをインポートしないでください。また、リエンゲージメント計測を実施しない場合は、FoxReengagePlugin.h, FoxReengagePlugin.mをインポートしないでください。
 
 
 ### ネイティブ用のSDKの組み込み
