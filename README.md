@@ -271,7 +271,7 @@ SDKの実行に必要な情報を<application>タグ内に追加します。
 カスタムURLスキームは他のActivityで設定しているものと異なる値を設定してください。
 
 ```xml
-<activity android:name="jp.appAdForce.android.IntentReceiverActivity" android:launchMode="singleTask">
+<activity android:name="jp.appAdForce.android.IntentReceiverActivity">
 	<intent-filter>
 		<action android:name="android.intent.action.VIEW" />
 		<category android:name="android.intent.category.DEFAULT" />
@@ -372,4 +372,4 @@ F.O.Xではいくつかの方式を組み合わせて端末の重複インスト
 
 [広告IDを利用するためのGoogle Play Services SDKの導入](./doc/google_play_services/ja/)
 
-[（オプション）外部ストレージを利用した重複排除設定](https://github.com/cyber-z/public_fox_android_sdk/tree/master/doc/external_storage/ja)
+[（オプション）外部ストレージを利用した重複排除設定](https://github.com/cyber-z/public_fox_android_sdk/tree/master/doc/external_storage/ja)
