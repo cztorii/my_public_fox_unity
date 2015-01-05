@@ -30,8 +30,7 @@
 
         <!-- カスタムURLスキーム経由の起動計測の設定 -->
         <activity
-            android:name="jp.appAdForce.android.IntentReceiverActivity"
-            android:launchMode="singleTask">
+            android:name="jp.appAdForce.android.IntentReceiverActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
