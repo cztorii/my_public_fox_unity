@@ -10,7 +10,7 @@
 6. Android用プラグインが不要な場合は、「Plugins/Android」のチェックを外す
 7. 「Import」ボタンを押下する
 
-![導入設定01](./img01.png)
+<img src="./img01.png" width="400px" />
 
 
 > iOSでF.O.Xのプッシュ通知を利用しない場合は、FoxNotifyPlugin.h, FoxNotifyPlugin.mをインポートしないでください。また、リエンゲージメント計測を実施しない場合は、FoxReengagePlugin.h, FoxReengagePlugin.mをインポートしないでください。
@@ -26,7 +26,7 @@ F.O.XのiOS SDK, Android SDKを組み込みます。
 
 「Plugins/Android」フォルダにAppAdForce.jarをドラッグして、コピーします。
 
-![導入設定02](./img02.png)
+<img src="./img02.png" width="700px" />
 
 
 > AndroidでF.O.Xのプッシュ通知機能を利用する場合は、gcm.jarの導入が必要となります。
@@ -37,4 +37,4 @@ gcm.jarを導入していない場合は、「FOX Android SDK_<version>」に含
 
 「FOX_iOS_SDK_<version>」以下に含まれる全てのファイルをドラッグして、Unityの「Plugins/iOS」フォルダに組み込みます。
 
-![導入設定03](./img03.png)
+<img src="./img03.png" width="700px" />
