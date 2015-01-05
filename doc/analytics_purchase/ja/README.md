@@ -3,7 +3,7 @@
 アクセス解析機能を利用し、自然流入経由を含めた広告別の課金計測を行うことができます。アクセス解析による課金計測を行うために、次のsendEventメソッドを実装します。
 
 ```C#
-FoxPlugin.sendEventPurchase(eventName, action, label, orderId, sku, itemName, price,quantity, currency);
+FoxPlugin.sendEventPurchase(eventName, action, label, orderId, sku, itemName, price, quantity, currency);
 ```
 
 sendEventメソッドのパラメータの仕様は下記の通りです。
@@ -28,7 +28,11 @@ LTV計測においても課金を成果地点としている場合には、同�
 
 
 
-```C#		// LTV計測による課金計測	FoxPlugin.addParameter(FoxPlugin.PARAM_PRICE, "300");
+```C#		
+// LTV計測による課金計測
+FoxPlugin.addParameter(FoxPlugin.PARAM_PRICE, "300");
 FoxPlugin.sendLtv(成果地点 ID);
 
-// アクセス解析による課金計測		FoxPlugin.sendEventPurchase("purchase", null, null, null, null, "", 300,1, "JPY");```
+// アクセス解析による課金計測
+FoxPlugin.sendEventPurchase("purchase", null, null, null, null, "", 300, 1, "JPY");
+```
