@@ -16,13 +16,16 @@ APNs及びGCMに端末を登録するために下記の設定を行います。
 > sendConversionメソッドをスクリプト実装している場合は、必ずsendConversionメソッドが呼ばれる後に配置してください。
 
 ```C#
-#if UNITY_IOS || UNITY_IPHONE		FoxPlugin.registerForRemoteNotifications();#elif UNITY_ANDROID		FoxPlugin.registerForRemoteNotifications(××××××);#endif
+#if UNITY_IOS || UNITY_IPHONE		FoxPlugin.registerForRemoteNotifications();#elif UNITY_ANDROID
+		// ××××××にはGoogle Developers Consoleで取得したProject番号を入力してください。		FoxPlugin.registerForRemoteNotifications(××××××);#endif
 ```
-××××××にはGoogle Developers Consoleで取得したProject番号を入力してください。
 
 ## iOS用の設定
 
-### iOSでF.O.X以外のプッシュ通知機能を共存させる場合
+通常は前述の共通設定のみで設定終了です。初回起動時に、Appleのサーバからデバイストークンを取得し、F.O.Xのサーバへ送信します。そのデバイストークンを使用して、F.O.X からプッシュ通知を送信します。
+もし、F.O.X以外のプッシュ通知機能を共存させる場合は次の実装を行ってください。
+
+#### iOSでF.O.X以外のプッシュ通知機能を共存させる場合
 
 デバイストークンをF.O.Xサーバーに登録する必要があります。
 
