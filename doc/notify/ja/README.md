@@ -1,10 +1,11 @@
 ## プッシュ通知の実装
 
-F.O.Xのプッシュ通知機能を使用しない場合は、設定の必要はありません。
+F.O.Xのプッシュ通知では、広告流入元別にユーザーのセグメントを分けてプッシュ通知を配信することが可能です。F.O.Xのプッシュ通知機能を使用しない場合は、本設定の必要はありません。
 
-### iOS/Androidの共通設定
 
-#### 端末の登録
+## iOS/Androidの共通設定
+
+### 端末の登録
 
 F.O.Xのプッシュ通知は、iOSの場合はAPNs（Apple Push Notification Service）を、Androidの場合はGoogleが提供するGCM（Google Cloud Messaging for Android）を利用してプッシュ通知を行います。
 
@@ -19,16 +20,9 @@ APNs及びGCMに端末を登録するために下記の設定を行います。
 ```
 ××××××にはGoogle Developers Consoleで取得したProject番号を入力してください。
 
-### iOS用の設定
+## iOS用の設定
 
-#### 遷移先の指定
-
-元の仕様書の意図不明。。。。。
-
-
-
-
-#### iOSでF.O.X以外のプッシュ通知機能を共存させる場合
+### iOSでF.O.X以外のプッシュ通知機能を共存させる場合
 
 デバイストークンをF.O.Xサーバーに登録する必要があります。
 
@@ -76,9 +70,9 @@ application:didFinishLaunchingWithOptions:とapplication:didReceiveRemoteNotific
 }
 ```
 
-### Android用の設定
+## Android用の設定
 
-#### パーミッションの設定
+### パーミッションの設定
 
 下記のように、プッシュ通知を受け取るために必要なパーミッションの設定を\<manifest\>タグ内に追加してください。
 
@@ -89,7 +83,7 @@ application:didFinishLaunchingWithOptions:とapplication:didReceiveRemoteNotific
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 ```
 
-#### プッシュ通知用レシーバーの設定
+### プッシュ通知用レシーバーの設定
 
 下記のように、プッシュ通知を受け取るために必要なレシーバーの設定を\<application\>タグ内に追加してください。
 
@@ -104,7 +98,7 @@ application:didFinishLaunchingWithOptions:とapplication:didReceiveRemoteNotific
 </receiver>
 ```
 
-#### 二つのレシーバーを共存させる場合
+### 二つのレシーバーを共存させる場合
 
 com.google.android.c2dm.intent.RECEIVEとcom.google.android.c2dm.intent.REGISTRATIONに対するレシーバークラスは一つしか選択できません。アプリケーションが二つのレシーバークラスを必要とする場合は、以下の設定を追記してください。
 
